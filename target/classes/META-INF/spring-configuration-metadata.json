@@ -1,0 +1,39 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.rzx.properties.ElasticSearchProperties",
+      "name": "elasticsearch",
+      "type": "com.rzx.properties.ElasticSearchProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.rzx.properties.ElasticSearchProperties",
+      "defaultValue": false,
+      "name": "elasticsearch.enable",
+      "description": "Is enable",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.rzx.properties.ElasticSearchProperties",
+      "name": "elasticsearch.host",
+      "description": "elasticsearch server host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.rzx.properties.ElasticSearchProperties",
+      "defaultValue": 0,
+      "name": "elasticsearch.port",
+      "description": "elasticsearch server port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.rzx.properties.ElasticSearchProperties",
+      "defaultValue": "http",
+      "name": "elasticsearch.scheme",
+      "description": "scheme",
+      "type": "java.lang.String"
+    }
+  ]
+}

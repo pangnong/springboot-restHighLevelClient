@@ -23,7 +23,6 @@
     },
     {
       "sourceType": "com.rzx.properties.ElasticSearchProperties",
-      "defaultValue": 0,
       "name": "elasticsearch.port",
       "description": "elasticsearch server port",
       "type": "java.lang.Integer"

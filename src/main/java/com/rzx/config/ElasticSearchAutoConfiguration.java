@@ -1,6 +1,7 @@
 package com.rzx.config;
 
 import com.rzx.properties.ElasticSearchProperties;
+import com.rzx.util.ElasticSearchUtils;
 import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestClientBuilder;
@@ -29,5 +30,10 @@ public class ElasticSearchAutoConfiguration {
         HttpHost httpHost = new HttpHost(elasticSearchProperties.getHost(), elasticSearchProperties.getPort(), elasticSearchProperties.getScheme());
         RestClientBuilder restClientBuilder = RestClient.builder(httpHost);
         return new RestHighLevelClient(restClientBuilder);
+    }
+
+    @Bean
+    public ElasticSearchUtils elasticSearchUtils() {
+        return new ElasticSearchUtils();
     }
 }

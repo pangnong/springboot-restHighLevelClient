@@ -1,7 +1,6 @@
 package com.rzx.util;
 
 import com.alibaba.fastjson.JSON;
-import com.sun.istack.internal.NotNull;
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexRequest;
 import org.elasticsearch.action.admin.indices.settings.put.UpdateSettingsRequest;
@@ -206,7 +205,7 @@ public class ElasticSearchUtils {
      * @param <T>          排序器的元素类型
      * @return 搜索响应结果
      */
-    public <T extends SortBuilder<T>> SearchResponse searchDoc(@NotNull QueryBuilder queryBuilder, SortBuilder<T> sortBuilder, Integer offset, Integer size, String... indices) throws IOException {
+    public <T extends SortBuilder<T>> SearchResponse searchDoc(QueryBuilder queryBuilder, SortBuilder<T> sortBuilder, Integer offset, Integer size, String... indices) throws IOException {
         SearchRequest searchRequest = new SearchRequest(indices);
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder().query(queryBuilder);
         if (offset != null && size != null) {

@@ -1,1 +1,6 @@
+com\rzx\pojo\User.class
+com\rzx\properties\ElasticSearchProperties.class
+com\rzx\config\ElasticSearchAutoConfiguration.class
+com\rzx\util\ElasticSearchUtils.class
+com\rzx\Application.class
 META-INF\spring-configuration-metadata.json

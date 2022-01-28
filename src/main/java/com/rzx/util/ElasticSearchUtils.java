@@ -106,8 +106,7 @@ public class ElasticSearchUtils {
      */
     public GetIndexResponse getIndices(String... indices) throws IOException {
         GetIndexRequest getIndexRequest = new GetIndexRequest(indices);
-        GetIndexResponse response = elasticSearchClient.indices().get(getIndexRequest, RequestOptions.DEFAULT);
-        return response;
+        return elasticSearchClient.indices().get(getIndexRequest, RequestOptions.DEFAULT);
     }
 
     /**
@@ -193,8 +192,7 @@ public class ElasticSearchUtils {
      */
     public GetResponse getDoc(String index, String id) throws IOException {
         GetRequest getRequest = new GetRequest(index, id);
-        GetResponse response = elasticSearchClient.get(getRequest, RequestOptions.DEFAULT);
-        return response;
+        return elasticSearchClient.get(getRequest, RequestOptions.DEFAULT);
     }
 
     /**
@@ -219,8 +217,7 @@ public class ElasticSearchUtils {
             searchSourceBuilder.sort(sortBuilder);
         }
         searchRequest.source(searchSourceBuilder);
-        SearchResponse response = elasticSearchClient.search(searchRequest, RequestOptions.DEFAULT);
-        return response;
+        return elasticSearchClient.search(searchRequest, RequestOptions.DEFAULT);
     }
 
     /**
@@ -233,8 +230,7 @@ public class ElasticSearchUtils {
     public SearchResponse searchDoc(SearchSourceBuilder searchSourceBuilder, String... indices) throws IOException {
         SearchRequest searchRequest = new SearchRequest(indices);
         searchRequest.source(searchSourceBuilder);
-        SearchResponse response = elasticSearchClient.search(searchRequest, RequestOptions.DEFAULT);
-        return response;
+        return elasticSearchClient.search(searchRequest, RequestOptions.DEFAULT);
     }
 
     /**

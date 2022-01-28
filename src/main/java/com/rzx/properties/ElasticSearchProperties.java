@@ -23,7 +23,7 @@ public class ElasticSearchProperties {
     /**
      * elasticsearch server port
      */
-    private int port;
+    private Integer port;
 
     /**
      * scheme
